@@ -1,0 +1,9 @@
+Sun, 05 Jun 2016 12:00:28 log4py.py[line:19] INFO \u82f9\u679c
+Sun, 05 Jun 2016 15:04:10 log4py.py[line:19] INFO 苹果
+Sun, 05 Jun 2016 15:05:49 log4py.py[line:19] INFO 苹果和橘子是好朋友。
+Sun, 05 Jun 2016 15:08:43 log4py.py[line:19] INFO 苹果和橘子是好朋友。
+Sun, 05 Jun 2016 15:11:40 log4py.py[line:19] INFO Please help me to play two 5.
+Sun, 05 Jun 2016 15:13:16 log4py.py[line:19] INFO Please help me to play two 5.
+Sun, 05 Jun 2016 15:14:45 log4py.py[line:19] INFO Пожалуйста, позвони мне позже.
+Sun, 05 Jun 2016 15:15:52 log4py.py[line:19] INFO 请稍后再给我打电话
+Sun, 05 Jun 2016 15:29:20 log4py.py[line:19] INFO Пожалуйста, позвони мне позже翻译为：请稍后再给我打电话
