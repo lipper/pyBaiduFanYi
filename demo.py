@@ -14,7 +14,7 @@ secretKey = 'O8bS3cjHGJJLDlOz_c2_'
 
 httpClient = None
 myurl = '/api/trans/vip/translate'
-q = 'apple'
+q ='apple'
 fromLang = 'en'
 toLang = 'zh'
 salt = random.randint(32768, 65536)
@@ -25,8 +25,8 @@ m1 = hashlib.md5()
 m1.update(sign)
 sign = m1.hexdigest()
 myurl = myurl+'?appid='+appid+'&q='+urllib.quote(q)+'&from='+fromLang+'&to='+toLang+'&salt='+str(salt)+'&sign='+sign
-furl="http://api.fanyi.baidu.com"+myurl
-print furl
+# furl="http://api.fanyi.baidu.com"+myurl
+# print furl
 try:
     httpClient = httplib.HTTPConnection('api.fanyi.baidu.com')
     httpClient.request('GET', myurl)
@@ -37,12 +37,12 @@ try:
     # 解析出中文译文
     import log4py
     dResult = dict(eval(sResult))['trans_result'][0]['dst']
-    print type(dResult)
-    uRes = unicode(dResult)
-    print isinstance(dResult, unicode)
-    print dResult.encode('utf-8')
+    # print type(dResult)
+    uResult = eval("u'" + dResult + "'")
+    # print isinstance(uResult, unicode)
+    print uResult.encode('utf-8')
 
-    log4py.level['info'](dResult)
+    log4py.level['info']("{0}翻译为：{1}".format(q, uResult.encode('utf-8')))   #记录翻译结果信息到日志中
     # import codecs
     # output = codecs.open('data.txt', 'a', 'utf-8')
     # content = unicode(dict(eval(sResult))['trans_result'][0]['dst'], 'utf-8')
